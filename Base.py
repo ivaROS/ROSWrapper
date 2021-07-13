@@ -27,7 +27,7 @@ class Base():
         """
         return None
 
-    def run(self):
+    def receive(self):
         """
         a way to trigger it?
         """
