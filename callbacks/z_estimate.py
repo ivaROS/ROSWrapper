@@ -3,6 +3,11 @@
         @brief: Assuming the visual field contains only a surface,
                 Given the depth map and the camera intrinsic matrix,
                 Derive the transformation to get the distance map of each pixel to the surface
+        
+        @Author: Yiye Chen                  yychen2019@gatech.edu
+        @Date: 07/13/2021
+
+        TODO: move that to elsewhere (improcessor repo?) when done
 """
 # ======================================= z_estimate =========================================
 
