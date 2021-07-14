@@ -22,7 +22,6 @@ class Images(Base):
         callback_np(image_np)
 
     def _preprocess(self, images_ROS):
-        # TODO: turn ROS image to numpy image
         image_np = images_ROS
         return image_np
 
