@@ -16,11 +16,13 @@ class Image_pub():
     """
     The image data publisher class
 
-    @param[in]  topic_name          String. 
-    @param[in]  encoding            String. The image format. 
-                                    Note that this is just a label, will not converge the image. See the link below:
-                                    http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython
-                                    Default is "passthrough"
+    @param[in]  topic_name          
+        String. 
+
+    @param[in]  encoding:
+        String. The image format. Default is "passthrough"
+        Note that this is just a label, will not converge the image. See the link below:
+        http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython
     """
 
     def __init__(self, topic_name, encoding="passthrough"):

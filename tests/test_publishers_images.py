@@ -15,6 +15,7 @@ import sys
 import cv2
 import numpy as np
 import time
+import rospy
 
 # setup the environment - add the root path
 fpath = os.path.dirname(__file__)
@@ -40,23 +41,30 @@ def read_npz(filename):
 
 
 if __name__ == "__main__":
+    # init the node
+    rospy.init_node("Test_Image_Pulisher")
+
     # prepare data
     img = cv2.imread(os.path.join(dpath, "empty_desk_0.png"))
+    img = img[:, :, ::-1]    #bgr to rgb
+
     depth = read_npz(os.path.join(dpath, "empty_desk_data_0.npz"))["depth_frame"]
 
     # prepare publishers
-    rgb_pub = Image_pub("Test_pub_image_rgb")
+    rgb_pub = Image_pub("Test_pub_image_rgb", encoding="rgb8")
     dep_pub = Image_pub("Test_pub_image_dep")
 
     # publish
     has_sent_notice = False
     while(True):
         rgb_pub.pub(img)
-        dep_pub.pub(dep_pub)
+        dep_pub.pub(depth)
 
         if not has_sent_notice:
-            print("\n\n Has published the rgb and the depth message to the topics: \n \
+            print("\n\nHas published the rgb and the depth message to the topics: \n \
                 \"Test_pub_image_rgb\" and \"Test_pub_image_dep\" ") 
+            print("Can visualize the published rgb image typing the following command in the terminal: \n \
+                rosrun image_view image_view image:=Test_pub_image_rgb")
             has_sent_notice = True
 
         time.sleep(0.05)
