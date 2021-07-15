@@ -15,6 +15,7 @@ import sys
 import cv2
 import numpy as np
 import time
+import rospy
 
 # setup the environment - add the root path
 fpath = os.path.dirname(__file__)
@@ -40,6 +41,9 @@ def read_npz(filename):
 
 
 if __name__ == "__main__":
+    # init the node
+    rospy.init_node("Test_Matrix_Publisher")
+
     # prepare data
     img = cv2.imread(os.path.join(dpath, "empty_desk_0.png"))
     intrinsic_matrix = read_npz(os.path.join(dpath, "empty_desk_data_0.npz"))["intrinsics"]
@@ -54,8 +58,10 @@ if __name__ == "__main__":
         mat_pub.pub(intrinsic_matrix)
 
         if not has_sent_notice:
-            print("\n\n Has published the rgb and the depth message to the topics: \n \
+            print("\n\n Has published the matrix message to the topics: \n \
                 \"Test_pub_mat\" ") 
+            print("\nCan type the following command to the terminal to verify: \n \
+                \" rostopic echo /Test_pub_mat \" ")
             has_sent_notice = True
 
         time.sleep(0.05)

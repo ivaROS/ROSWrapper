@@ -38,7 +38,7 @@ class Matrix_pub():
         """
         if isinstance(mat, list):
             mat_return = np.asarray(mat)
-        elif isinstance(img_data, np.ndarray):
+        elif isinstance(mat, np.ndarray):
             mat_return = mat
         else:
             raise NotImplementedError("Only list or np.ndarray data is acceptable")
