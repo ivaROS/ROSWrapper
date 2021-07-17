@@ -29,5 +29,7 @@ A ROS wrapper that helps connect functions with ROS
    roscore
    ```
 
+2. Before running any ```tests/test_subscribers_*```, please run the ```tests/test_publishers_images.py``` and ```tests/test_publishers_mat.py``` to publish the topics.
+
    
 
