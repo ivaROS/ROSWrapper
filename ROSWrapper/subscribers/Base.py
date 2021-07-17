@@ -14,7 +14,7 @@
 from message_filters import TimeSynchronizer, Subscriber
 import rospy
 
-class Base():
+class Base(object):
 
     def __init__(self, topic_list, messageType_list, callback):
         self.subs = [self.subscribe(topic, messageType) 
