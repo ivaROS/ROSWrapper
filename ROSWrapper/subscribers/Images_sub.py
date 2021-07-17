@@ -6,7 +6,7 @@
     @Author: Yiye Chen              yychen2019@gatech.edu
     @date: 07/13/2021
 
-    TODO: currently I have to made the callback to accept only the argument list as input, 
+    TODO: currently I have to made the callback to accept only the argument list as input:
             def callback([img1, img2, ...])
         where ideally the callback should be able to be like:
             def callback(img1, img2, ...)

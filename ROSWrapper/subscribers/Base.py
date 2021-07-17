@@ -7,7 +7,7 @@
     @date: 07/12/2021 (created)
 
     Use the message_filters.TimySynchronizer to achieve the goal of 
-    triggering a callback on the receiving of multiple subscribers
+    triggering a callback on multiple subscribers
 """
 # =============================== Base ===============================
 

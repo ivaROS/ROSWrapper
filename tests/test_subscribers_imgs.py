@@ -7,7 +7,7 @@
             @Date: 07/13/2021
 
             Apply it on the task of subscribing to a RGB and a D topic, 
-            and trigger a toy callback that shows both images. 
+            and trigger a toy callback that shows  the vertical stack of both images. 
             Requires such two topics exist from ROS
 """
 # ================================= test_sensors_RGB_D ===============================
