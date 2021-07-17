@@ -14,7 +14,7 @@
 import numpy as np
 import cv2
 
-from subscribers.Images_sub import Images_sub
+from ROSWrapper.subscribers.Images_sub import Images_sub
 
 def callback(RGB_np):
     cv2.imshow("test_sensors_RGB", RGB_np)

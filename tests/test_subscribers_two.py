@@ -15,7 +15,7 @@
 import numpy as np
 import cv2
 
-from sensors import Image
+from ROSWrapper.subscribers.Images_sub import Image
 
 topic_name_RGB = "sensor/rgb"
 topic_name_D = "sensor/dep"

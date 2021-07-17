@@ -23,7 +23,7 @@ rpath = os.path.dirname(fpath)
 dpath = os.path.join(fpath, 'data')
 sys.path.append(rpath)
 
-from publishers.Image_pub import Image_pub
+from ROSWrapper.publishers.Image_pub import Image_pub
 
 def read_npz(filename):
     """

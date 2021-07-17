@@ -23,7 +23,7 @@ rpath = os.path.dirname(fpath)
 dpath = os.path.join(fpath, 'data')
 sys.path.append(rpath)
 
-from publishers.Matrix_pub import Matrix_pub
+from ROSWrapper.publishers.Matrix_pub import Matrix_pub
 
 def read_npz(filename):
     """
