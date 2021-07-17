@@ -36,16 +36,3 @@ class Images_sub(Base):
     def _preprocess(self, img_ROS):
         img_np = self.bridge.imgmsg_to_cv2(img_ROS, 'rgb8')
         return img_np
-
-if __name__=="__main__":
-
-    def func1(a, b):
-        print(a+b)
-
-    def fun_meta(*args):
-        func1(args)
-    
-    print(fun_meta(2,3))
-
-
-    
