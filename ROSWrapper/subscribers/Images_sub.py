@@ -34,5 +34,5 @@ class Images_sub(Base):
         return self.callback_np(args_p)
 
     def _preprocess(self, img_ROS):
-        img_np = self.bridge.imgmsg_to_cv2(img_ROS, 'rgb8')
+        img_np = self.bridge.imgmsg_to_cv2(img_ROS)
         return img_np
