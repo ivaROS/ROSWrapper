@@ -8,7 +8,7 @@ A ROS wrapper that helps connect functions with ROS
 
 ``subscribers/``: The classes for subscribing to multiple ros topics and register callbacks taking in the same number of inputs
 
-```subscribers/callbacks/```: Contains some callback functions. Some of them might be better to put somewhere else.
+```subscribers/preprocess/```: Contains some preprocess functions served for the callbacks. They typically convert the ROS massage data to the more commonly used python data. 
 
 ```publishers/```: The classes for publishing data
 

@@ -1,0 +1,8 @@
+# vscode genereated 
+.vscode
+
+# temporary files
+*.pyc
+
+# auto-generated
+*.egg-info

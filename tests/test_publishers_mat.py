@@ -32,7 +32,7 @@ def read_npz(filename):
 
     see: https://stackoverflow.com/a/65414582/5269146
     """
-    if(sys.version_info[:3] <3.0):
+    if(sys.version_info.major < 3.0):
         data = np.load(filename)
     else:
         data = np.load(filename, 

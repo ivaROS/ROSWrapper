@@ -10,7 +10,7 @@
 # ============================ Matrix_pub =============================
 
 import rospy
-from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import Float64MultiArray, MultiArrayDimension
 import numpy as np
 
 class Matrix_pub():
