@@ -25,6 +25,10 @@ class Matrix_pub():
         self.publisher = rospy.Publisher(topic_name, Float64MultiArray)
 
     def pub(self, mat):
+
+        # Float64MultiArray does not support time stamp
+        # https://answers.ros.org/question/321904/get-the-timestamp-a-float64multiarray-message-was-published/
+
         mat_pub = Float64MultiArray()
         mat_pub.data = self._mat_to_row_vec(mat).tolist()
 

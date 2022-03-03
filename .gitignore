@@ -1,6 +1,9 @@
 # vscode genereated 
 .vscode
 
+# pycharm genereated 
+.idea
+
 # temporary files
 *.pyc
 

@@ -28,13 +28,19 @@ class Image_pub():
     def __init__(self, topic_name, encoding="passthrough"):
         self.publisher = rospy.Publisher(topic_name, Image, queue_size=100)
         self.encoding = encoding
+        self.frame_id = topic_name
 
         self.bridge = CvBridge()
 
     def pub(self, img_data):
         if isinstance(img_data, np.ndarray):
-            self.publisher.publish(
-                self.bridge.cv2_to_imgmsg(img_data, encoding=self.encoding)
-            )
+
+            stamp = rospy.Time.now()
+            image_msg = self.bridge.cv2_to_imgmsg(img_data, encoding=self.encoding)
+            image_msg.header.stamp = stamp
+            image_msg.header.frame_id = self.frame_id
+
+            self.publisher.publish(image_msg)
+
         else:
             raise NotImplementedError("Only the opencv image (numpy.ndarray) is accepted for now")
