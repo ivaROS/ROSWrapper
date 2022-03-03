@@ -3,7 +3,7 @@
     @brief      A base class that subscribe to multiple topics 
                  and trigger the callback
     
-    @author: Yiye Chen          yychen2019@gatech.edun
+    @author: Yiye Chen          yychen2019@gatech.edu
     @date: 07/12/2021 (created)
 
     Use the message_filters.TimySynchronizer to achieve the goal of 

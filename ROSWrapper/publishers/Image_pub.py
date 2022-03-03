@@ -26,7 +26,7 @@ class Image_pub():
     """
 
     def __init__(self, topic_name, encoding="passthrough"):
-        self.publisher = rospy.Publisher(topic_name, Image)
+        self.publisher = rospy.Publisher(topic_name, Image, queue_size=100)
         self.encoding = encoding
 
         self.bridge = CvBridge()
