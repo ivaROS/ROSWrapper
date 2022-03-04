@@ -2,7 +2,12 @@
 
 A ROS wrapper that helps connect functions with ROS
 
+## Install
 
+```
+git clone https://github.com/ivaROS/ROSWrapper.git
+pip3 install -e ROSWrapper/
+```
 
 ## Structure:
 
