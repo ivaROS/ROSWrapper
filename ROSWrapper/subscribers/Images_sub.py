@@ -30,7 +30,16 @@ class Images_sub(Base):
         self.bridge = CvBridge()
 
     def process(self, *args):
+
+        # Debug only
+        # print(args[0].header.stamp)
+        # print(args[1].header.stamp)
+
         args_p = [self._preprocess(img_ROS) for img_ROS in args]
+
+        # Currently, add a timestamp
+        args_p.append(args[0].header.stamp)
+
         return self.callback_np(args_p)
 
     def _preprocess(self, img_ROS):
